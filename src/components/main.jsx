@@ -3,7 +3,7 @@ import { Fetching } from "../fetching";
 
 export default function Main() {
 
-    const [url] = useState('https://upload-your-image-backend.herokuapp.com/images');
+    const [url] = useState(`${process.env.REACT_APP_API_URL}/images`);
     const estado = Fetching(url);
     const {cargando, data} = estado;
     cargando ? console.log('cargando...') : console.log('Datos cargados correctamente');
@@ -11,7 +11,7 @@ export default function Main() {
   return (
     <main className="m-4">
       <form
-        action="https://upload-your-image-backend.herokuapp.com/upload"
+        action={`${process.env.REACT_APP_API_URL}/upload`}
         method="post"
         encType="multipart/form-data"
       >
