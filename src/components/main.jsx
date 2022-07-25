@@ -9,7 +9,7 @@ export default function Main() {
     cargando ? console.log('cargando...') : console.log(data.images);
 
   return (
-    <main className="m-5">
+    <main className="m-4">
       <form
         action="http://127.0.0.1/upload"
         method="post"
@@ -29,16 +29,22 @@ export default function Main() {
             type="submit"
             id="inputGroupFileAddon04"
           >
-            Upload
+            <i class="fas fa-upload"></i>
           </button>
         </div>
       </form>
-      <div className="row">
+      <div className="d-flex justify-content-center flex-wrap mx-2 my-4">
         {cargando ? (
           <h1>Un momento por favor...</h1>
         ) : (
           data.images.map((_id, length) => (
-            <img src={data.images[length].image} alt={data.images[length]._id} />
+            <img
+              className="m-2"
+              width="200px"
+              src={data.images[length].image}
+              alt={data.images[length]._id}
+              title={data.images[length]._id}
+            />
           ))
         )}
       </div>
