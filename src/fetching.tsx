@@ -13,13 +13,7 @@ export const Fetching = (url: any) => {
       data: null,
     });
 
-    const res = await fetch(Url, {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Origin": "*",
-      },
-    });
+    const res = await fetch(Url);
     const data = await res.json();
 
     setResultado({ cargando: false, data });
