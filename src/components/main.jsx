@@ -11,7 +11,7 @@ export default function Main() {
   return (
     <main className="m-4">
       <form
-        action="http://127.0.0.1/upload"
+        action="https://upload-your-image-backend.herokuapp.com/upload"
         method="post"
         encType="multipart/form-data"
       >
