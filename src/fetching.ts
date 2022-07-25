@@ -17,7 +17,8 @@ export const Fetching = (url: any) => {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
-        mode: "no-cors"
+        mode: "no-cors",
+        "Access-Control-Allow-Origin": "*",
       },
     });
     const data = await res.json();
