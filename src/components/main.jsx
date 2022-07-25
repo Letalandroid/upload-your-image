@@ -3,7 +3,7 @@ import { Fetching } from "../fetching";
 
 export default function Main() {
 
-    const [url] = useState('http://127.0.0.1/images');
+    const [url] = useState('http://upload-your-image-backend.herokuapp.com/images');
     const estado = Fetching(url);
     const {cargando, data} = estado;
     cargando ? console.log('cargando...') : console.log(data.images);
