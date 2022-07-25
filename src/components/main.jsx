@@ -6,7 +6,7 @@ export default function Main() {
     const [url] = useState('https://upload-your-image-backend.herokuapp.com/images');
     const estado = Fetching(url);
     const {cargando, data} = estado;
-    cargando ? console.log('cargando...') : console.log(data.images);
+    cargando ? console.log('cargando...') : console.log('Datos cargados correctamente');
 
   return (
     <main className="m-4">
