@@ -33,7 +33,7 @@ export default function Main() {
           </button>
         </div>
       </form>
-      <div className="d-flex justify-content-center flex-wrap mx-2 my-4">
+      <div className="d-flex justify-content-center align-items-center flex-wrap mx-2 my-4">
         {cargando ? (
           <h1>Un momento por favor...</h1>
         ) : (
